@@ -1,0 +1,430 @@
+From c4c94be2beaed6264f984111d517e17ff4d64181 Mon Sep 17 00:00:00 2001
+From: Jyothish9988 <93032610+Jyothish9988@users.noreply.github.com>
+Date: Sat, 6 Jul 2024 12:48:49 +0530
+Subject: [PATCH] UPDATE
+
+---
+ .idea/.gitignore                              |   8 +
+ .idea/forage-jpmc-swe-task-3.iml              |  12 ++
+ .idea/inspectionProfiles/Project_Default.xml  | 193 ++++++++++++++++++
+ .../inspectionProfiles/profiles_settings.xml  |   6 +
+ .idea/misc.xml                                |   7 +
+ .idea/modules.xml                             |   8 +
+ .idea/vcs.xml                                 |   6 +
+ src/DataManipulator.ts                        |  35 +++-
+ src/Graph.tsx                                 |  29 +--
+ 9 files changed, 281 insertions(+), 23 deletions(-)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/forage-jpmc-swe-task-3.iml
+ create mode 100644 .idea/inspectionProfiles/Project_Default.xml
+ create mode 100644 .idea/inspectionProfiles/profiles_settings.xml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+index 0000000..13566b8
+--- /dev/null
++++ b/.idea/.gitignore
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+diff --git a/.idea/forage-jpmc-swe-task-3.iml b/.idea/forage-jpmc-swe-task-3.iml
+new file mode 100644
+index 0000000..8b8c395
+--- /dev/null
++++ b/.idea/forage-jpmc-swe-task-3.iml
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++  <component name="PyDocumentationSettings">
++    <option name="format" value="PLAIN" />
++    <option name="myDocStringFormat" value="Plain" />
++  </component>
++</module>
+\ No newline at end of file
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+new file mode 100644
+index 0000000..5380c71
+--- /dev/null
++++ b/.idea/inspectionProfiles/Project_Default.xml
+@@ -0,0 +1,193 @@
++<component name="InspectionProjectProfileManager">
++  <profile version="1.0">
++    <option name="myName" value="Project Default" />
++    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
++      <option name="ignoredPackages">
++        <value>
++          <list size="173">
++            <item index="0" class="java.lang.String" itemvalue="httpx" />
++            <item index="1" class="java.lang.String" itemvalue="Babel" />
++            <item index="2" class="java.lang.String" itemvalue="scikit-learn" />
++            <item index="3" class="java.lang.String" itemvalue="PyYAML" />
++            <item index="4" class="java.lang.String" itemvalue="pickleshare" />
++            <item index="5" class="java.lang.String" itemvalue="defusedxml" />
++            <item index="6" class="java.lang.String" itemvalue="executing" />
++            <item index="7" class="java.lang.String" itemvalue="pycparser" />
++            <item index="8" class="java.lang.String" itemvalue="mpi4py" />
++            <item index="9" class="java.lang.String" itemvalue="markdown-it-py" />
++            <item index="10" class="java.lang.String" itemvalue="ipython-genutils" />
++            <item index="11" class="java.lang.String" itemvalue="gradio_client" />
++            <item index="12" class="java.lang.String" itemvalue="bootstrap4" />
++            <item index="13" class="java.lang.String" itemvalue="Pygments" />
++            <item index="14" class="java.lang.String" itemvalue="starlette" />
++            <item index="15" class="java.lang.String" itemvalue="bleach" />
++            <item index="16" class="java.lang.String" itemvalue="lxml" />
++            <item index="17" class="java.lang.String" itemvalue="pyreadline3" />
++            <item index="18" class="java.lang.String" itemvalue="soupsieve" />
++            <item index="19" class="java.lang.String" itemvalue="uvicorn" />
++            <item index="20" class="java.lang.String" itemvalue="jsonschema" />
++            <item index="21" class="java.lang.String" itemvalue="pywin32" />
++            <item index="22" class="java.lang.String" itemvalue="terminado" />
++            <item index="23" class="java.lang.String" itemvalue="nbclassic" />
++            <item index="24" class="java.lang.String" itemvalue="pydantic" />
++            <item index="25" class="java.lang.String" itemvalue="Werkzeug" />
++            <item index="26" class="java.lang.String" itemvalue="asgiref" />
++            <item index="27" class="java.lang.String" itemvalue="pydub" />
++            <item index="28" class="java.lang.String" itemvalue="jupyterlab-pygments" />
++            <item index="29" class="java.lang.String" itemvalue="loguru" />
++            <item index="30" class="java.lang.String" itemvalue="click" />
++            <item index="31" class="java.lang.String" itemvalue="ipykernel" />
++            <item index="32" class="java.lang.String" itemvalue="nbconvert" />
++            <item index="33" class="java.lang.String" itemvalue="attrs" />
++            <item index="34" class="java.lang.String" itemvalue="contourpy" />
++            <item index="35" class="java.lang.String" itemvalue="psutil" />
++            <item index="36" class="java.lang.String" itemvalue="jedi" />
++            <item index="37" class="java.lang.String" itemvalue="openai" />
++            <item index="38" class="java.lang.String" itemvalue="flatbuffers" />
++            <item index="39" class="java.lang.String" itemvalue="pure-eval" />
++            <item index="40" class="java.lang.String" itemvalue="regex" />
++            <item index="41" class="java.lang.String" itemvalue="pydantic_core" />
++            <item index="42" class="java.lang.String" itemvalue="asttokens" />
++            <item index="43" class="java.lang.String" itemvalue="platformdirs" />
++            <item index="44" class="java.lang.String" itemvalue="optree" />
++            <item index="45" class="java.lang.String" itemvalue="snscrape" />
++            <item index="46" class="java.lang.String" itemvalue="notebook-shim" />
++            <item index="47" class="java.lang.String" itemvalue="matplotlib" />
++            <item index="48" class="java.lang.String" itemvalue="httpcore" />
++            <item index="49" class="java.lang.String" itemvalue="idna" />
++            <item index="50" class="java.lang.String" itemvalue="decorator" />
++            <item index="51" class="java.lang.String" itemvalue="dotnet" />
++            <item index="52" class="java.lang.String" itemvalue="json5" />
++            <item index="53" class="java.lang.String" itemvalue="cffi" />
++            <item index="54" class="java.lang.String" itemvalue="pandocfilters" />
++            <item index="55" class="java.lang.String" itemvalue="numpy" />
++            <item index="56" class="java.lang.String" itemvalue="requests" />
++            <item index="57" class="java.lang.String" itemvalue="opencv-python-headless" />
++            <item index="58" class="java.lang.String" itemvalue="sniffio" />
++            <item index="59" class="java.lang.String" itemvalue="websocket-client" />
++            <item index="60" class="java.lang.String" itemvalue="pyrsistent" />
++            <item index="61" class="java.lang.String" itemvalue="nudenet" />
++            <item index="62" class="java.lang.String" itemvalue="win32-setctime" />
++            <item index="63" class="java.lang.String" itemvalue="stack-data" />
++            <item index="64" class="java.lang.String" itemvalue="mdurl" />
++            <item index="65" class="java.lang.String" itemvalue="nest-asyncio" />
++            <item index="66" class="java.lang.String" itemvalue="ml-dtypes" />
++            <item index="67" class="java.lang.String" itemvalue="prompt-toolkit" />
++            <item index="68" class="java.lang.String" itemvalue="scapy" />
++            <item index="69" class="java.lang.String" itemvalue="djangorestframework" />
++            <item index="70" class="java.lang.String" itemvalue="itsdangerous" />
++            <item index="71" class="java.lang.String" itemvalue="websockets" />
++            <item index="72" class="java.lang.String" itemvalue="blinker" />
++            <item index="73" class="java.lang.String" itemvalue="pyarrow" />
++            <item index="74" class="java.lang.String" itemvalue="annotated-types" />
++            <item index="75" class="java.lang.String" itemvalue="scipy" />
++            <item index="76" class="java.lang.String" itemvalue="tornado" />
++            <item index="77" class="java.lang.String" itemvalue="aiofiles" />
++            <item index="78" class="java.lang.String" itemvalue="Send2Trash" />
++            <item index="79" class="java.lang.String" itemvalue="python-multipart" />
++            <item index="80" class="java.lang.String" itemvalue="mistune" />
++            <item index="81" class="java.lang.String" itemvalue="pandas" />
++            <item index="82" class="java.lang.String" itemvalue="django-rest-framework" />
++            <item index="83" class="java.lang.String" itemvalue="toolz" />
++            <item index="84" class="java.lang.String" itemvalue="Django" />
++            <item index="85" class="java.lang.String" itemvalue="mpmath" />
++            <item index="86" class="java.lang.String" itemvalue="namex" />
++            <item index="87" class="java.lang.String" itemvalue="ruff" />
++            <item index="88" class="java.lang.String" itemvalue="typing_extensions" />
++            <item index="89" class="java.lang.String" itemvalue="debugpy" />
++            <item index="90" class="java.lang.String" itemvalue="argon2-cffi" />
++            <item index="91" class="java.lang.String" itemvalue="pytz" />
++            <item index="92" class="java.lang.String" itemvalue="webencodings" />
++            <item index="93" class="java.lang.String" itemvalue="traitlets" />
++            <item index="94" class="java.lang.String" itemvalue="absl-py" />
++            <item index="95" class="java.lang.String" itemvalue="protobuf" />
++            <item index="96" class="java.lang.String" itemvalue="pygame" />
++            <item index="97" class="java.lang.String" itemvalue="pywinpty" />
++            <item index="98" class="java.lang.String" itemvalue="joblib" />
++            <item index="99" class="java.lang.String" itemvalue="threadpoolctl" />
++            <item index="100" class="java.lang.String" itemvalue="huggingface-hub" />
++            <item index="101" class="java.lang.String" itemvalue="nltk" />
++            <item index="102" class="java.lang.String" itemvalue="python-dateutil" />
++            <item index="103" class="java.lang.String" itemvalue="h11" />
++            <item index="104" class="java.lang.String" itemvalue="nbclient" />
++            <item index="105" class="java.lang.String" itemvalue="cycler" />
++            <item index="106" class="java.lang.String" itemvalue="MarkupSafe" />
++            <item index="107" class="java.lang.String" itemvalue="jupyter-server" />
++            <item index="108" class="java.lang.String" itemvalue="tinycss2" />
++            <item index="109" class="java.lang.String" itemvalue="django-bootstrap4" />
++            <item index="110" class="java.lang.String" itemvalue="fsspec" />
++            <item index="111" class="java.lang.String" itemvalue="pyttsx" />
++            <item index="112" class="java.lang.String" itemvalue="semantic-version" />
++            <item index="113" class="java.lang.String" itemvalue="filelock" />
++            <item index="114" class="java.lang.String" itemvalue="pyzmq" />
++            <item index="115" class="java.lang.String" itemvalue="certifi" />
++            <item index="116" class="java.lang.String" itemvalue="anyio" />
++            <item index="117" class="java.lang.String" itemvalue="keras" />
++            <item index="118" class="java.lang.String" itemvalue="entrypoints" />
++            <item index="119" class="java.lang.String" itemvalue="pyparsing" />
++            <item index="120" class="java.lang.String" itemvalue="Markdown" />
++            <item index="121" class="java.lang.String" itemvalue="sympy" />
++            <item index="122" class="java.lang.String" itemvalue="notebook" />
++            <item index="123" class="java.lang.String" itemvalue="beautifulsoup4" />
++            <item index="124" class="java.lang.String" itemvalue="jupyter_client" />
++            <item index="125" class="java.lang.String" itemvalue="h5py" />
++            <item index="126" class="java.lang.String" itemvalue="kiwisolver" />
++            <item index="127" class="java.lang.String" itemvalue="orjson" />
++            <item index="128" class="java.lang.String" itemvalue="jupyterlab_server" />
++            <item index="129" class="java.lang.String" itemvalue="altair" />
++            <item index="130" class="java.lang.String" itemvalue="coloredlogs" />
++            <item index="131" class="java.lang.String" itemvalue="fonttools" />
++            <item index="132" class="java.lang.String" itemvalue="backcall" />
++            <item index="133" class="java.lang.String" itemvalue="PySocks" />
++            <item index="134" class="java.lang.String" itemvalue="argon2-cffi-bindings" />
++            <item index="135" class="java.lang.String" itemvalue="virtualenv" />
++            <item index="136" class="java.lang.String" itemvalue="charset-normalizer" />
++            <item index="137" class="java.lang.String" itemvalue="distlib" />
++            <item index="138" class="java.lang.String" itemvalue="ffmpy" />
++            <item index="139" class="java.lang.String" itemvalue="shellingham" />
++            <item index="140" class="java.lang.String" itemvalue="distro" />
++            <item index="141" class="java.lang.String" itemvalue="jupyter-core" />
++            <item index="142" class="java.lang.String" itemvalue="gradio" />
++            <item index="143" class="java.lang.String" itemvalue="matplotlib-inline" />
++            <item index="144" class="java.lang.String" itemvalue="wcwidth" />
++            <item index="145" class="java.lang.String" itemvalue="Jinja2" />
++            <item index="146" class="java.lang.String" itemvalue="sqlparse" />
++            <item index="147" class="java.lang.String" itemvalue="onnxruntime" />
++            <item index="148" class="java.lang.String" itemvalue="tomlkit" />
++            <item index="149" class="java.lang.String" itemvalue="tomli" />
++            <item index="150" class="java.lang.String" itemvalue="urllib3" />
++            <item index="151" class="java.lang.String" itemvalue="jupyterlab" />
++            <item index="152" class="java.lang.String" itemvalue="Flask" />
++            <item index="153" class="java.lang.String" itemvalue="six" />
++            <item index="154" class="java.lang.String" itemvalue="typer" />
++            <item index="155" class="java.lang.String" itemvalue="importlib_resources" />
++            <item index="156" class="java.lang.String" itemvalue="parso" />
++            <item index="157" class="java.lang.String" itemvalue="nbformat" />
++            <item index="158" class="java.lang.String" itemvalue="tzdata" />
++            <item index="159" class="java.lang.String" itemvalue="ipython" />
++            <item index="160" class="java.lang.String" itemvalue="rich" />
++            <item index="161" class="java.lang.String" itemvalue="dill" />
++            <item index="162" class="java.lang.String" itemvalue="packaging" />
++            <item index="163" class="java.lang.String" itemvalue="fastjsonschema" />
++            <item index="164" class="java.lang.String" itemvalue="humanfriendly" />
++            <item index="165" class="java.lang.String" itemvalue="pipenv" />
++            <item index="166" class="java.lang.String" itemvalue="prometheus-client" />
++            <item index="167" class="java.lang.String" itemvalue="tqdm" />
++            <item index="168" class="java.lang.String" itemvalue="pyspellchecker" />
++            <item index="169" class="java.lang.String" itemvalue="fastapi" />
++            <item index="170" class="java.lang.String" itemvalue="dotenv" />
++            <item index="171" class="java.lang.String" itemvalue="colorama" />
++            <item index="172" class="java.lang.String" itemvalue="pillow" />
++          </list>
++        </value>
++      </option>
++    </inspection_tool>
++    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
++      <option name="ignoredErrors">
++        <list>
++          <option value="N806" />
++        </list>
++      </option>
++    </inspection_tool>
++  </profile>
++</component>
+\ No newline at end of file
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+index 0000000..105ce2d
+--- /dev/null
++++ b/.idea/inspectionProfiles/profiles_settings.xml
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+index 0000000..4a0edba
+--- /dev/null
++++ b/.idea/misc.xml
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Black">
++    <option name="sdkName" value="Python 3.10 (online-examination-system-master)" />
++  </component>
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (online-examination-system-master)" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+index 0000000..ade28e9
+--- /dev/null
++++ b/.idea/modules.xml
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/forage-jpmc-swe-task-3.iml" filepath="$PROJECT_DIR$/.idea/forage-jpmc-swe-task-3.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+index 0000000..35eb1dd
+--- /dev/null
++++ b/.idea/vcs.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/src/DataManipulator.ts b/src/DataManipulator.ts
+index 7f62295..1ca6df4 100644
+--- a/src/DataManipulator.ts
++++ b/src/DataManipulator.ts
+@@ -1,20 +1,33 @@
+ import { ServerRespond } from './DataStreamer';
+ 
+ export interface Row {
+-  stock: string,
+-  top_ask_price: number,
++  price_abc: number,
++  price_def: number,
++  ratio: number,
+   timestamp: Date,
+-}
++  upper_bound: number,
++  lower_bound: number,
++  trigger_alert: number | undefined,
+ 
++}
+ 
+ export class DataManipulator {
+-  static generateRow(serverResponds: ServerRespond[]) {
+-    return serverResponds.map((el: any) => {
+-      return {
+-        stock: el.stock,
+-        top_ask_price: el.top_ask && el.top_ask.price || 0,
+-        timestamp: el.timestamp,
++  static generateRow(serverResponds: ServerRespond[]): Row {
++    const priceABC = (serverResponds[0].top_ask.price + serverResponds[0].top_bid.price)/2;
++    const priceDEF = (serverResponds[1].top_ask.price + serverResponds[1].top_bid.price)/2;
++    const ratio = priceABC / priceDEF;
++    const upper_bound = 1 + 0.01;
++    const lower_bound = 1 - 0.01;
++    return {
++      price_abc: priceABC,
++      price_def: priceDEF,
++      ratio,
++      timestamp: serverResponds[0].timestamp > serverResponds[1].timestamp ?
++                  serverResponds[0].timestamp : serverResponds[1].timestamp,
++      upper_bound: upper_bound,
++      lower_bound: lower_bound,
++      trigger_alert: (ratio > upper_bound || ratio < lower_bound ) ? ratio : undefined,
++
+       };
+-    })
+   }
+-}
++}
+\ No newline at end of file
+diff --git a/src/Graph.tsx b/src/Graph.tsx
+index 277797d..b9439cd 100644
+--- a/src/Graph.tsx
++++ b/src/Graph.tsx
+@@ -1,5 +1,6 @@
+ import React, { Component } from 'react';
+-import { Table } from '@finos/perspective';
++// @ts-ignore
++import { Table } from '@jpmorganchase/perspective';
+ import { ServerRespond } from './DataStreamer';
+ import { DataManipulator } from './DataManipulator';
+ import './Graph.css';
+@@ -23,10 +24,13 @@ class Graph extends Component<IProps, {}> {
+     const elem = document.getElementsByTagName('perspective-viewer')[0] as unknown as PerspectiveViewerElement;
+ 
+     const schema = {
+-      stock: 'string',
+-      top_ask_price: 'float',
+-      top_bid_price: 'float',
++      price_abc: 'float',
++      price_def: 'float',
++      ratio: 'float',
+       timestamp: 'date',
++      upper_bound: 'float',
++      lower_bound: 'float',
++      trigger_alert: 'float',
+     };
+ 
+     if (window.perspective && window.perspective.worker()) {
+@@ -36,25 +40,26 @@ class Graph extends Component<IProps, {}> {
+       // Load the `table` in the `<perspective-viewer>` DOM reference.
+       elem.load(this.table);
+       elem.setAttribute('view', 'y_line');
+-      elem.setAttribute('column-pivots', '["stock"]');
+       elem.setAttribute('row-pivots', '["timestamp"]');
+-      elem.setAttribute('columns', '["top_ask_price"]');
++      elem.setAttribute('columns', '["ratio","lower_bound","upper_bound","trigger_alert"]');
+       elem.setAttribute('aggregates', JSON.stringify({
+-        stock: 'distinctcount',
+-        top_ask_price: 'avg',
+-        top_bid_price: 'avg',
++        price_abc: 'avg',
++        price_def: 'avg',
+         timestamp: 'distinct count',
++        upper_bound: 'avg',
++        lower_bound: 'avg',
++        trigger_alert: 'avg',
+       }));
+     }
+   }
+ 
+   componentDidUpdate() {
+     if (this.table) {
+-      this.table.update(
++      this.table.update([
+         DataManipulator.generateRow(this.props.data),
+-      );
++      ]);
+     }
+   }
+ }
+ 
+-export default Graph;
++export default Graph;
+\ No newline at end of file
+-- 
+2.40.1.windows.1
+
